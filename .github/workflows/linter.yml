@@ -21,6 +21,17 @@ jobs:
     - name: Use Node.js 12.X
       uses: actions/setup-node@v1
       with:
-        node-version: 12.X
+        node-version: 12.0.0
+    - run: npm install eslint --save-dev
     - run: npm ci
     - run: npm run lint
+# [OR] -run yarn add eslint --dev
+# npx eslint --init
+# npx eslint yourfile.js
+# [Global install] npm install eslint --global
+# [solve bugs] run: --env-info Run:--debug
+# [If Windows ignore] -v, --version
+# Ignore file =  
+# .eslintignore   
+# temp.js
+# **/vendor/*.js
