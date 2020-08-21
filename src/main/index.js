@@ -65,9 +65,9 @@ function createWindow () {
     backgroundColor: '#fff',
     width: 960,
     height: 540,
-    icon: isDev ?
-      path.join(__dirname, '../../_icons/iconColor.png') : 
-      `${__dirname}/_icons/iconColor.png`,
+    icon: isDev
+      ? path.join(__dirname, '../../_icons/iconColor.png')
+      : `${__dirname}/_icons/iconColor.png`,
     autoHideMenuBar: true,
     // useContentSize: true,
     webPreferences: {
