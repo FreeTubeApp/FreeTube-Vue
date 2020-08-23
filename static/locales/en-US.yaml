@@ -3,7 +3,7 @@ Locale Name: English
 FreeTube: FreeTube
 # Currently on Subscriptions, Playlists, and History
 'This part of the app is not ready yet. Come back later when progress has been made.': >-
-  This part of the app is not ready yet. Come back later when progress has been made.
+  This part of the app is not ready yet. Come back later.
 
 # Webkit Menu Bar
 File: File
@@ -18,11 +18,11 @@ Delete: Delete
 Select all: Select all
 Reload: Reload
 Force Reload: Force Reload
-Toggle Developer Tools: Toggle Developer Tools
+Toggle Developer Tools: Developer Tools
 Actual size: Actual size
-Zoom in: Zoom in
-Zoom out: Zoom out
-Toggle fullscreen: Toggle fullscreen
+Zoom in: Zoom
+Zoom out: Shrink
+Toggle fullscreen: Fullscreen
 Window: Window
 Minimize: Minimize
 Close: Close
@@ -38,8 +38,8 @@ Search Filters:
     Sort By: Sort By
     Most Relevant: Most Relevant
     Rating: Rating
-    Upload Date: Upload Date
-    View Count: View Count
+    Upload Date: Uploaded
+    View Count: Views
   Time:
     Time: Time
     Any Time: Any Time
@@ -61,16 +61,16 @@ Search Filters:
     Long (> 20 minutes): Long (> 20 minutes)
   # On Search Page
   Search Results: Search Results
-  Fetching results. Please wait: Fetching results. Please wait
+  Fetching results. Please wait: Fetching results
   Fetch more results: Fetch more results
 # Sidebar
 Subscriptions:
     # On Subscriptions Page
   Subscriptions: Subscriptions
   Latest Subscriptions: Latest Subscriptions
-  'Your Subscription list is currently empty. Start adding subscriptions to see them here.': Your
-    Subscription list is currently empty. Start adding subscriptions to see them here.
-  'Getting Subscriptions.  Please wait.': Getting Subscriptions.  Please wait.
+  'Your Subscription list is currently empty. Start adding subscriptions to see them here.': Add
+    subscriptions to see them here.
+  'Getting Subscriptions.  Please wait.': Fetching subscriptions
 Trending: Trending
 Most Popular: Most Popular
 Playlists: Playlists
@@ -86,13 +86,12 @@ Settings:
   Settings: Settings
   General Settings:
     General Settings: General Settings
-    Fallback to Non-Preferred Backend on Failure: Fallback to Non-Preferred Backend
-      on Failure
-    Enable Search Suggestions: Enable Search Suggestions
+    Fallback to Non-Preferred Backend on Failure: Fallback Back-end
+    Enable Search Suggestions: Search Suggestions
     Default Landing Page: Default Landing Page
     Locale Preference: Locale Preference
     Preferred API Backend:
-      Preferred API Backend: Preferred API Backend
+      Preferred API Backend: Preferred API Back-end
       Local API: Local API
       Invidious API: Invidious API
     Video View Type:
@@ -100,25 +99,24 @@ Settings:
       Grid: Grid
       List: List
     Thumbnail Preference:
-      Thumbnail Preference: Thumbnail Preference
+      Thumbnail Preference: Thumbnail Position
       Default: Default
       Beginning: Beginning
       Middle: Middle
       End: End
-    'Invidious Instance (Default is https://invidio.us)': Invidious Instance (Default
-      is https://invidio.us)
+    'Invidious Instance (Default is https://invidio.us)': Invidious Instance
     Region for Trending: Region for Trending
         #! List countries
   Theme Settings:
     Theme Settings: Theme Settings
-    Match Top Bar with Main Color: Match Top Bar with Main Color
+    Match Top Bar with Main Color: Matching main and secondary colours
     Base Theme:
       Base Theme: Base Theme
       Black: Black
       Dark: Dark
       Light: Light
     Main Color Theme:
-      Main Color Theme: Main Color Theme
+      Main Color Theme: Main
       Red: Red
       Pink: Pink
       Purple: Purple
@@ -135,7 +133,7 @@ Settings:
       Amber: Amber
       Orange: Orange
       Deep Orange: Deep Orange
-    Secondary Color Theme: Secondary Color Theme
+    Secondary Color Theme: Secondary
         #* Main Color Theme
   Player Settings:
     Player Settings: Player Settings
@@ -145,7 +143,7 @@ Settings:
     Autoplay Videos: Autoplay Videos
     Proxy Videos Through Invidious: Proxy Videos Through Invidious
     Autoplay Playlists: Autoplay Playlists
-    Enable Theatre Mode by Default: Enable Theatre Mode by Default
+    Enable Theatre Mode by Default: Theatre Mode
     Default Volume: Default Volume
     Default Playback Rate: Default Playback Rate
     Default Video Format:
@@ -177,11 +175,11 @@ Settings:
     Watch history has been cleared: Watch history has been cleared
   Subscription Settings:
     Subscription Settings: Subscription Settings
-    Hide Videos on Watch: Hide Videos on Watch
+    Hide Videos on Watch: Hide watched Videos on Watch
     Subscriptions Export Format:
       Subscriptions Export Format: Subscriptions Export Format
       #& Freetube
-      Newpipe: Newpipe
+      Newpipe: NewPipe
       OPML: OPML
     Manage Subscriptions: Manage Subscriptions
     Import Subscriptions: Import Subscriptions
@@ -189,7 +187,7 @@ Settings:
     How do I import my subscriptions?: How do I import my subscriptions?
   Advanced Settings:
     Advanced Settings: Advanced Settings
-    Enable Debug Mode (Prints data to the console): Enable Debug Mode (Prints data
+    Enable Debug Mode (Prints data to the console): Turn on debug mode (prints data
       to the console)
     'Proxy Address (Example: SOCKS5://127.0.0.1:9050 )': 'Proxy Address (Example:
       SOCKS5://127.0.0.1:9050 )'
@@ -202,15 +200,13 @@ Settings:
     Clear History:
       Clear History: Clear History
       # On Click
-      Are you sure you want to delete your history?: Are you sure you want to delete
-        your history?
+      Are you sure you want to delete your history?: Delete all your history?
       #& Yes
       #& No
     Clear Subscriptions:
       Clear Subscriptions: Clear Subscriptions
       # On Click
-      Are you sure you want to remove all subscriptions?: Are you sure you want to
-        remove all subscriptions?
+      Are you sure you want to remove all subscriptions?: Remove all your subscriptions?
       #& Yes
       #& No
 
@@ -219,30 +215,28 @@ About:
   About: About
   #& About
   'This software is FOSS and released under the GNU Affero General Public License v3.0.': This
-    copylefted software is freely licensed AGPL-3.0.
+    copylefted libre software is licensed AGPLv3+.
 
   'Found a bug? Want to suggest a feature? Want to help out? Check out our GitHub page. Pull requests are welcome.': >-
     Found a bug? Want to suggest a feature? Want to help out? Check out our GitHub
     page. Pull requests welcome.
 
   Thank you very much to the People and Projects that make FreeTube possible!: Thank
-    you very much to the People and Projects that make FreeTube possible!
+    you very much to the people and projects that make FreeTube possible!
 
-  'Want to chat? Join our Element / Matrix Server . Please check the rules before joining.': Want
-    to chat? Join our Element / Matrix Server . Please check the rules before joining.
+  'Want to chat? Join our Element / Matrix Server . Please check the rules before joining.': Join our
+    Element / Matrix Server to chat.
 
-  'Looking for help? Check out our Wiki page.': Looking for help? Check out our Wiki
-    page.
+  'Looking for help? Check out our Wiki page.': Looking for help? Check out our wiki.
 
   Check out our Firefox extension!: Check out our Firefox extension!
 
-  'If you enjoy using FreeTube, consider donating via Liberapay or through our Bitcoin address.': If
-    you enjoy using FreeTube, consider donating via Liberapay or through our Bitcoin
-    address.
+  'If you enjoy using FreeTube, consider donating via Liberapay or through our Bitcoin address.': Enjoy
+    using FreeTube? consider donating via Liberapay or through our Bitcoin address.
 
   #~ 'BTC: 1Lih7Ho5gnxb1CwPD4o59ss78pwo2T91eS'
 
-  Latest FreeTube News: Latest FreeTube News
+  Latest FreeTube News: FreeTube News
 
 #On Channel Page
 Channel:
@@ -251,21 +245,18 @@ Channel:
   Subscribe: Subscribe
   Unsubscribe: Unsubscribe
   Search Channel: Search Channel
-  Your search results have returned 0 results: Your search results have returned 0
-    results
+  Your search results have returned 0 results: No results
   Sort By: Sort By
   Videos:
     Videos: Videos
-    This channel does not currently have any videos: This channel does not currently
-      have any videos
+    This channel does not currently have any videos: No videos here
     Sort Types:
       Newest: Newest
       Oldest: Oldest
       Most Popular: Most Popular
   Playlists:
     Playlists: Playlists
-    This channel does not currently have any playlists: This channel does not currently
-      have any playlists
+    This channel does not currently have any playlists: No playlists here
     Sort Types:
       Last Video Added: Last Video Added
       Newest: Newest
@@ -277,8 +268,8 @@ Channel:
 Video:
   Mark As Watched: Mark As Watched
   Remove From History: Remove From History
-  Video has been marked as watched: Video has been marked as watched
-  Video has been removed from your history: Video has been removed from your history
+  Video has been marked as watched: Marked as watched
+  Video has been removed from your history: Removed from your history
   Open in YouTube: Open in YouTube
   Copy YouTube Link: Copy YouTube Link
   Open YouTube Embedded Player: Open YouTube Embedded Player
@@ -294,16 +285,15 @@ Video:
   Live: Live
   Live Now: Live Now
   Live Chat: Live Chat
-  Enable Live Chat: Enable Live Chat
-  Live Chat is currently not supported in this build.: Live Chat is currently not
+  Enable Live Chat: Click to turn on
+  Live Chat is currently not supported in this build.: Live chat currently not
     supported in this build.
-  'Chat is disabled or the Live Stream has ended.': Chat is disabled or the Live Stream
-    has ended.
-  Live chat is enabled.  Chat messages will appear here once sent.: Live chat is enabled.  Chat
-    messages will appear here once sent.
+  'Chat is disabled or the Live Stream has ended.': You have chat off, or the live stream
+    ended.
+  Live chat is enabled.  Chat messages will appear here once sent.: Live chat on. Chat
+    messages appear here once sent.
   'Live Chat is currently not supported with the Invidious API.  A direct connection to YouTube is required.': Live
-    Chat is currently not supported with the Invidious API.  A direct connection to
-    YouTube is required.
+    Chat currently not supported with the Invidious API. Direct connection to YouTube required.
   Published:
     Jan: Jan
     Feb: Feb
@@ -332,7 +322,7 @@ Video:
     Ago: Ago
     Upcoming: Premieres soon
   Published on: Published on
-  # $ is replaced with the number and % with the unit (days, hours, minutes...)
+  # $ is replaced with the number and % with the unit (days, hours, minutes…)
   Publicationtemplate: $ % ago
 #& Videos
 Videos:
@@ -348,7 +338,7 @@ Playlist:
   Videos: Videos
   View: View
   Views: Views
-  Last Updated On: Last Updated On
+  Last Updated On: Last Updated
   Share Playlist:
     Share Playlist: Share Playlist
     Copy YouTube Link: Copy YouTube Link
@@ -359,9 +349,9 @@ Playlist:
 # On Video Watch Page
 #* Published
 #& Views
-Toggle Theatre Mode: Toggle Theatre Mode
+Toggle Theatre Mode: Theatre Mode
 Change Format:
-  Change Video Formats: Change Video Formats
+  Change Video Formats: Change Video Format
   Use Dash Formats: Use Dash Formats
   Use Legacy Formats: Use Legacy Formats
   Use Audio Formats: Use Audio Formats
@@ -369,18 +359,18 @@ Share:
   Share Video: Share Video
   Copy Link: Copy Link
   Open Link: Open Link
-  Copy Embed: Copy Embed
-  Open Embed: Open Embed
+  Copy Embed: Copy Embedded
+  Open Embed: Open Embedded
   # On Click
   Invidious URL copied to clipboard: Invidious URL copied to clipboard
-  Invidious Embed URL copied to clipboard: Invidious Embed URL copied to clipboard
+  Invidious Embed URL copied to clipboard: Invidious embedded URL copied to clipboard
   YouTube URL copied to clipboard: YouTube URL copied to clipboard
-  YouTube Embed URL copied to clipboard: YouTube Embed URL copied to clipboard
+  YouTube Embed URL copied to clipboard: YouTube embedded URL copied to clipboard
 Mini Player: Mini Player
 Comments:
   Comments: Comments
-  Click to View Comments: Click to View Comments
-  Getting comment replies, please wait: Getting comment replies, please wait
+  Click to View Comments: Click to view
+  Getting comment replies, please wait: Fetching comment replies
   Show Comments: Show Comments
   Hide Comments: Hide Comments
   # Context: View 10 Replies, View 1 Reply
@@ -388,28 +378,26 @@ Comments:
   Hide: Hide
   Replies: Replies
   Reply: Reply
-  There are no comments available for this video: There are no comments available
-    for this video
-  Load More Comments: Load More Comments
+  There are no comments available for this video: Uncommented
+  Load More Comments: More Comments
 Up Next: Up Next
 
 # Toast Messages
-Local API Error (Click to copy): Local API Error (Click to copy)
-Invidious API Error (Click to copy): Invidious API Error (Click to copy)
+Local API Error (Click to copy): Local API error (click to copy)
+Invidious API Error (Click to copy): Invidious API error (click to copy)
 Falling back to Invidious API: Falling back to Invidious API
 Falling back to the local API: Falling back to the local API
-Subscriptions have not yet been implemented: Subscriptions have not yet been implemented
-Loop is now disabled: Loop is now disabled
-Loop is now enabled: Loop is now enabled
-Shuffle is now disabled: Shuffle is now disabled
-Shuffle is now enabled: Shuffle is now enabled
+Subscriptions have not yet been implemented: Subscriptions to be implemented soon
+Loop is now disabled: Looping off
+Loop is now enabled: Looping on
+Shuffle is now disabled: Shuffle off
+Shuffle is now enabled: Shuffle on
 Playing Next Video: Playing Next Video
 Playing Previous Video: Playing Previous Video
-Playing next video in 5 seconds.  Click to cancel: Playing next video in 5 seconds.  Click
-  to cancel
+Playing next video in 5 seconds.  Click to cancel: Click now to cancel next in 5 seconds.
 Canceled next video autoplay: Canceled next video autoplay
-'The playlist has ended.  Enable loop to continue playing': 'The playlist has ended.  Enable
-  loop to continue playing'
+'The playlist has ended.  Enable loop to continue playing': 'The playlist ended. Turn on
+  looping to continue playing'
 
 Yes: Yes
 No: No
