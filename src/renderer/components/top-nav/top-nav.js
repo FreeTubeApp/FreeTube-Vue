@@ -128,7 +128,7 @@ export default Vue.extend({
       }
 
       ytSuggest(query).then((results) => {
-        this.setSearchSuggestionData(results)
+        this.setSearchSuggestionsData(results)
       })
     },
 
@@ -149,7 +149,7 @@ export default Vue.extend({
       this.$store
         .dispatch('invidiousAPICall', searchPayload)
         .then((results) => {
-          this.setSearchSuggestionData(results.suggestions)
+          this.setSearchSuggestionsData(results.suggestions)
         })
         .error((err) => {
           console.log(err)
@@ -162,7 +162,7 @@ export default Vue.extend({
         })
     },
 
-    setSearchSuggestionData: function (data) {
+    setSearchSuggestionsData: function (data) {
       if (this.discardSuggestionsDataOnArrival) {
         this.discardSuggestionsDataOnArrival = false
       } else {
