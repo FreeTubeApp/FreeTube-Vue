@@ -17,7 +17,8 @@ export default Vue.extend({
       component: this,
       windowWidth: 0,
       showFilters: false,
-      searchSuggestionsDataList: []
+      searchSuggestionsDataList: [],
+      discardSuggestionsDataOnArrival: false
     }
   },
   computed: {
@@ -73,6 +74,7 @@ export default Vue.extend({
   methods: {
     goToSearch: function (query) {
       const appWidth = $(window).width()
+      this.discardSuggestionsDataOnArrival = true
 
       if (appWidth <= 680) {
         const searchContainer = $('.searchContainer').get(0)
@@ -102,6 +104,7 @@ export default Vue.extend({
     },
 
     getSearchSuggestionsDebounce: function (query) {
+      this.discardSuggestionsDataOnArrival = false
       if (this.enableSearchSuggestions) {
         this.debounceSearchResults(query)
       }
@@ -125,7 +128,7 @@ export default Vue.extend({
       }
 
       ytSuggest(query).then((results) => {
-        this.searchSuggestionsDataList = results
+        this.setSearchSuggestionData(results)
       })
     },
 
@@ -146,7 +149,7 @@ export default Vue.extend({
       this.$store
         .dispatch('invidiousAPICall', searchPayload)
         .then((results) => {
-          this.searchSuggestionsDataList = results.suggestions
+          this.setSearchSuggestionData(results.suggestions)
         })
         .error((err) => {
           console.log(err)
@@ -157,6 +160,14 @@ export default Vue.extend({
             this.getSearchSuggestionsLocal(query)
           }
         })
+    },
+
+    setSearchSuggestionData: function (data) {
+      if (this.discardSuggestionsDataOnArrival) {
+        this.discardSuggestionsDataOnArrival = false
+      } else {
+        this.searchSuggestionsDataList = data
+      }
     },
 
     toggleSearchContainer: function () {
