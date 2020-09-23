@@ -3,15 +3,20 @@ import ytsr from 'ytsr'
 import ytpl from 'ytpl'
 
 import IsEqual from 'lodash.isequal'
+import fork from 'child_process'
 
 const state = {
   main: 0,
-  isYtSearchRunning: false
+  isYtSearchRunning: false,
+  scrapeProcess: fork.fork('D:\\Workspace\\JavaScript\\FreeTube-Vue\\src\\processes\\index.js', ['args'], { stdio: ['pipe', 'pipe', 'pipe', 'ipc'] })
 }
 
 const getters = {
   getMain ({ state }) {
     return state.main
+  },
+  getScrapeProcess() {
+    return state.scrapeProcess
   }
 }
 

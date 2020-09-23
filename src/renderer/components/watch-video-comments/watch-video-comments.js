@@ -2,6 +2,7 @@ import Vue from 'vue'
 import { mapActions } from 'vuex'
 import FtCard from '../ft-card/ft-card.vue'
 import FtLoader from '../../components/ft-loader/ft-loader.vue'
+import { fork } from 'child_process'
 // import ytcs from 'yt-comment-scraper'
 
 export default Vue.extend({
@@ -67,17 +68,35 @@ export default Vue.extend({
 
     getCommentDataLocal: function () {
       console.log('Getting comment data please wait..')
-      this.showToast({
-        message: 'Comments through the local API are temporarily disabled'
+      //const scraper = fork('D:\\Workspace\\JavaScript\\FreeTube-Vue\\src\\processes\\index.js', ['args'], { stdio: ['pipe', 'pipe', 'pipe', 'ipc'] })
+      this.commentProcess.on('message', (message) => {
+        if (message !== 'error') {
+          const commentData = JSON.parse(message).map((comment) => {
+            comment.showReplies = false
+            comment.dataType = 'local'
+
+            return comment
+          })
+          console.log(commentData)
+          this.commentData = this.commentData.concat(commentData)
+          this.isLoading = false
+          this.showComments = true
+        } else {
+          this.showToast({
+            message: 'Comments through the local API are temporarily disabled'
+          })
+          if (this.backendFallback && this.backendPreference === 'local') {
+            this.showToast({
+              message: this.$t('Falling back to Invidious API')
+            })
+            this.getCommentDataInvidious()
+          } else {
+            this.isLoading = false
+          }
+        }
       })
-      if (this.backendFallback && this.backendPreference === 'local') {
-        this.showToast({
-          message: this.$t('Falling back to Invidious API')
-        })
-        this.getCommentDataInvidious()
-      } else {
-        this.isLoading = false
-      }
+      this.$store.getters.getScrapeProcess.send('snp' + this.id)
+
       // ytcs.scrape_next_page_youtube_comments(this.id).then((response) => {
       //   console.log(response)
       //   const commentData = response.comments.map((comment) => {

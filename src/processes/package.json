@@ -1,0 +1,30 @@
+{
+  "name": "yt-comment-scraper",
+  "version": "1.1.3",
+  "description": "Accesses the comments of YouTube via an Ajax call towards YouTube after initially accessing the video page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GilgusMaximus/yt-comment-scraper.git"
+  },
+  "keywords": [
+    "youtube",
+    "youtube-fetch",
+    "youtube-scraper",
+    "youtube-grabber",
+    "youtube comments",
+    "youtube-comments",
+    "youtube without api",
+    "youtube-fetcher",
+    "comments"
+  ],
+  "author": "GilgusMaximus <software@lucahohmann.com>",
+  "license": "GPLv3",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "html2json": "^1.0.2"
+  }
+}
