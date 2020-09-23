@@ -560,12 +560,18 @@ export default Vue.extend({
         })
         return
       }
-
+      const watchedProgress = this.getWatchedProgress()
       this.activeFormat = 'dash'
       this.hidePlayer = true
 
       setTimeout(() => {
         this.hidePlayer = false
+        setTimeout(() => {
+          const player = this.$refs.videoPlayer.player
+          if (player !== null) {
+            player.currentTime(watchedProgress)
+          }
+        }, 500)
       }, 100)
     },
 
@@ -574,12 +580,19 @@ export default Vue.extend({
         return
       }
 
+      const watchedProgress = this.getWatchedProgress()
       this.activeFormat = 'legacy'
       this.activeSourceList = this.videoSourceList
       this.hidePlayer = true
 
       setTimeout(() => {
         this.hidePlayer = false
+        setTimeout(() => {
+          const player = this.$refs.videoPlayer.player
+          if (player !== null) {
+            player.currentTime(watchedProgress)
+          }
+        }, 500)
       }, 100)
     },
 
@@ -595,12 +608,19 @@ export default Vue.extend({
         return
       }
 
+      const watchedProgress = this.getWatchedProgress()
       this.activeFormat = 'audio'
       this.activeSourceList = this.audioSourceList
       this.hidePlayer = true
 
       setTimeout(() => {
         this.hidePlayer = false
+        setTimeout(() => {
+          const player = this.$refs.videoPlayer.player
+          if (player !== null) {
+            player.currentTime(watchedProgress)
+          }
+        }, 500)
       }, 100)
     },
 
@@ -663,14 +683,15 @@ export default Vue.extend({
           this.updateWatchProgress(payload)
         }
 
-        if (player.isInPictureInPicture()) {
+        if (player !== null && !player.paused() && player.isInPictureInPicture()) {
+          const playerId = this.videoId
           setTimeout(() => {
             player.play()
             player.on('leavepictureinpicture', () => {
               const watchTime = player.currentTime()
               if (this.$route.fullPath.includes('/watch')) {
                 const routeId = this.$route.params.id
-                if (routeId === this.videoId) {
+                if (routeId === playerId) {
                   const activePlayer = $('.ftVideoPlayer video').get(0)
                   activePlayer.currentTime = watchTime
                 }
