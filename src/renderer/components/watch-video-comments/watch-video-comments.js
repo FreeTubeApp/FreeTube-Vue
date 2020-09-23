@@ -79,7 +79,7 @@ export default Vue.extend({
     getCommentDataLocal: function () {
       console.log('Getting comment data please wait..')
       //const scraper = fork('D:\\Workspace\\JavaScript\\FreeTube-Vue\\src\\processes\\index.js', ['args'], { stdio: ['pipe', 'pipe', 'pipe', 'ipc'] })
-      this.commentProcess.on('message', (message) => {
+      this.$store.getters.getScrapeProcess.on('message', (message) => {
         if (message !== 'error') {
           const commentData = JSON.parse(message).map((comment) => {
             comment.showReplies = false
