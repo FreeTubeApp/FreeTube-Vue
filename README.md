@@ -2,6 +2,10 @@
  <img src="https://freetubeapp.github.io/images/logoColor.png" width=500 align="center">
 </p>
 
+# THIS REPO IS NO LONGER MAINTAINED
+
+We're continuing development over [here](https://github.com/FreeTubeApp/FreeTube), feel free to join us!
+
 # The FreeTube Vue.js Rewrite
 
 FreeTube is an open source desktop YouTube player built with privacy in mind.  This repository specifically is about a rewrite of FreeTube that is actively being worked on.  FreeTube will be rewritten from the ground up to take advantage of better coding practices and to make proper use of Vue.js compared to the previous code base.  You can read more about why a rewrite is in development over at the related [blog post](https://write.as/freetube/behind-the-scenes-the-rewrite-also-code-release).
